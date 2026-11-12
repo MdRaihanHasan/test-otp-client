@@ -1,7 +1,14 @@
 {
     "name": "bixcel/test-otp-client",
     "description": "Laravel client for the Centralised Test Mobile ID & Virtual OTP Inbox: routes test-number OTPs to a virtual inbox instead of SMS.",
-    "keywords": ["laravel", "otp", "sms", "testing", "twilio", "test-accounts"],
+    "keywords": [
+        "laravel",
+        "otp",
+        "sms",
+        "testing",
+        "twilio",
+        "test-accounts"
+    ],
     "type": "library",
     "license": "MIT",
     "require": {
@@ -17,21 +24,34 @@
         "phpunit/phpunit": "^10.5|^11.0|^12.0"
     },
     "autoload": {
-        "psr-4": { "Bixcel\\TestOtp\\": "src/" }
+        "psr-4": {
+            "Bixcel\\TestOtp\\": "src/"
+        }
     },
     "autoload-dev": {
-        "psr-4": { "Bixcel\\TestOtp\\Tests\\": "tests/" }
+        "psr-4": {
+            "Bixcel\\TestOtp\\Tests\\": "tests/"
+        }
     },
     "scripts": {
         "test": "phpunit"
     },
     "extra": {
         "laravel": {
-            "providers": ["Bixcel\\TestOtp\\TestOtpServiceProvider"],
-            "aliases": { "TestOtp": "Bixcel\\TestOtp\\Facades\\TestOtp" }
+            "providers": [
+                "Bixcel\\TestOtp\\TestOtpServiceProvider"
+            ],
+            "aliases": {
+                "TestOtp": "Bixcel\\TestOtp\\Facades\\TestOtp"
+            }
+        },
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
         }
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
-    "config": { "sort-packages": true }
+    "config": {
+        "sort-packages": true
+    }
 }

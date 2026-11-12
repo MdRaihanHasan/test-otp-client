@@ -15,15 +15,49 @@ Supports PHP 8.2+ and Laravel 11, 12 and 13.
 
 ## Installation
 
-```bash
-composer require bixcel/test-otp-client
+This package is not on Packagist. Install it straight from GitHub by adding the repository to your
+platform's `composer.json`:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/MdRaihanHasan/test-otp-client"
+        }
+    ],
+    "require": {
+        "bixcel/test-otp-client": "dev-main"
+    }
+}
 ```
+
+Or run these two commands from your platform's root folder:
+
+```bash
+composer config repositories.test-otp-client vcs https://github.com/MdRaihanHasan/test-otp-client
+```
+
+```bash
+composer require bixcel/test-otp-client:dev-main
+```
+
+Once a version tag such as `v1.0.0` exists on GitHub, you can pin to it instead with
+`composer require bixcel/test-otp-client:^1.0`.
+
+Publish the config file:
 
 ```bash
 php artisan vendor:publish --tag=test-otp-config
 ```
 
 The service provider, the `TestOtp` facade and the `block-test-accounts` middleware are auto-discovered.
+
+To update to the latest version later:
+
+```bash
+composer update bixcel/test-otp-client
+```
 
 ## Configuration
 
